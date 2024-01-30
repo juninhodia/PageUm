@@ -1,0 +1,53 @@
+#produtosPromocao {
+    display: flex;
+    flex-direction: column;
+    align-items:center ;
+    justify-content: space-around;
+    padding: 20px;
+    gap: 4rem;
+    margin-bottom: 3rem;
+}
+
+.card {
+    width: 300px; /* Ajuste a largura conforme necessário */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    text-align: center;
+    background-color: white;
+    border-radius: 1rem;
+
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+}
+
+.titulo-produto {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.preco {
+    font-size: 1rem;
+    color: #333;
+}
+
+.preco-original {
+    text-decoration: line-through;
+    color: #777;
+    margin-right: 10px;
+}
+
+.preco-desconto {
+    color: green;
+    font-weight: bold;
+}
+
+

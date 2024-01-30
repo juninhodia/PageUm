@@ -1,0 +1,34 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  td {
+    padding: 10px;
+  }
+  
+  .button {
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    background-color: #ccc;
+  }
+  
+  .image {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .product-name {
+    font-size: 20px;
+  }
+  
+  .product-price {
+    font-size: 18px;
+  }
+  

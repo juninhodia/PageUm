@@ -1,0 +1,17 @@
+#marcas_trabalhadas {
+    overflow: hidden;
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.carousel {
+    display: flex;
+    gap: 8%;
+    transition: transform 1s ease-in-out; /* Aumente a duração da transição */
+}
+
+.carousel img {
+    max-width: 40%; /* Garante que as imagens não ultrapassem a largura do contêiner */
+    height: auto; /* Mantém a proporção das imagens */
+}

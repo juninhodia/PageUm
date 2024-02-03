@@ -1,0 +1,83 @@
+#pagamentos {
+    margin-top: 2rem;
+    background-color: var(--cor-primary);
+    width: 100%;
+    padding: 4rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+.pagamento_informacao{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 2rem;
+    justify-content: center;
+    padding: 0 1rem;
+}
+
+.pagamento_informacao_div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.titulo_pagamentos{
+    font-family: var(--font-secundary);
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--cor-body);
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    position: relative; /* Necessário para o efeito de sublinhado */
+    padding-bottom: 0px; /* Espaço para o sublinhado */
+}
+
+
+#pagamentos {
+    text-align: center; /* Centraliza o título e o conteúdo */
+}
+
+.titulo_pagamentos {
+    margin-bottom: 20px; /* Espaço abaixo do título */
+}
+
+.pagamento_informacao {
+    display: flex; /* Usa Flexbox para organizar as divs lado a lado */
+    justify-content: center; /* Centraliza as divs horizontalmente */
+    gap: 20px; /* Espaço entre as divs */
+    
+}
+
+.pagamento_informacao div {
+    flex-basis: 200px; /* Define uma largura base para cada div */
+    text-align: left; /* Alinha o texto à esquerda dentro de cada div */
+    width: 100%;
+}
+
+.icon__pagamentos {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    width: 8rem; /* Ajuste a largura do ícone conforme necessário */
+    height: auto; /* Mantém a proporção do ícone */
+    margin-bottom: 10px; /* Espaço abaixo do ícone */
+}
+
+.titulo_pagamento {
+    text-transform: uppercase;
+    color: white;
+}
+
+.paragrafo_pagamento {
+    text-align: center;
+    font-size: 1.1rem;
+    color: white;
+}

@@ -1,0 +1,84 @@
+@import url(style/telaPrincipal.css);
+@import url(style/marcasTrabalhadas.css);
+@import url(style/produtoPromocao.css);
+@import url(style/maisVendido.css);
+@import url(style/pagameneto.css);
+@import url(style/RedeSocial.css);
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-secundary);
+    background: var(--cor-body);
+}
+
+:root {
+    --cor-body:#f1f1f1;
+    --cor-icon:#272727;
+
+    --cor-primary:#499a09;
+    --cor-secundary:#30AE24;
+    --cor-text:#3f4a3c;
+    --cor-sub-titulo:#a3af9e;
+
+    --font-primary:'Montserrat', sans-serif;
+    --font-secundary: 'Poppins', sans-serif;
+}
+
+.titulo {
+    padding: 1rem;
+    font-family: var(--font-secundary);
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--cor-primary);
+    text-align: center;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    position: relative; /* Necessário para o efeito de sublinhado */
+    padding-bottom: 0px; /* Espaço para o sublinhado */
+}
+
+
+.titulo::after {
+    content: '';
+    display: block;
+    width: 50px; /* Largura do sublinhado */
+    height: 2px; /* Espessura do sublinhado */
+    background-color: #24AD4A; /* Cor do sublinhado */
+    margin: 0 auto; /* Centraliza o sublinhado */
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: width 0.3s ease; /* Animação ao passar o mouse */
+}
+
+.titulo:hover::after {
+    width: 100%; /* Sublinhado se expande ao passar o mouse */
+}
+
+.titulo {
+    /* Estilos anteriores */
+    animation: fadeInUp 0.5s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+

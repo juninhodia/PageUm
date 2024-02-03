@@ -1,0 +1,244 @@
+#telaPrincipal {
+    width: 100vw;   /* 100% da largura da janela de visualização */
+    height: 100vh;  /* 100% da altura da janela de visualização */
+    overflow: hidden; /* Previne a rolagem se o conteúdo exceder a tela */
+}
+
+
+.top-bar {
+    background-color: var(--cor-primary);
+    font-size: .8rem;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.top-bar {
+    /* Restante do seu CSS para top-bar */
+    animation: slideDown 0.5s ease forwards;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 3.5rem;
+    background-color:white;
+    padding: 10px 20px;
+}
+
+.logo {
+    width: 11rem;
+}
+
+.hamburger {
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: #272727;
+    cursor: pointer;
+}
+
+/* Restante do CSS permanece igual */
+
+.navbar {
+    position: relative; /* Adicionado para posicionar o menu em relação à barra de navegação */
+}
+
+#menu {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    height: 110vh;
+}
+.menu {
+    position: absolute; /* Mudado de fixed para absolute */
+    top: 99%; /* Posiciona o menu logo abaixo da barra de navegação */
+    left: 0;
+    width: 100%;
+    
+    max-height: 0; /* Inicialmente sem altura visível */
+    overflow: hidden; /* Evita que o conteúdo transborde quando o menu está fechado */
+    background-color: var(--cor-body); /* Fundo semi-transparente */
+    transition: max-height 0.3s ease;
+    z-index: 1000; /* Garante que o menu fique acima de outros elementos */
+}
+
+.menu.show {
+    max-height: 500px; /* Altura máxima quando visível */
+}
+
+.menu a {
+    color: #272727;
+    text-decoration: none;
+    padding: 15px 20px;
+    display: block;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease 0.3s; /* Atrasa a aparição dos links até que o menu esteja totalmente aberto */
+}
+
+.menu a:hover{
+    background: var(--cor-primary);
+}
+
+.menu.show a {
+    opacity: 1;
+}
+
+.hamburger {
+    cursor: pointer;
+    background: none;
+    border: none;
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 20px;
+}
+
+.hamburger span {
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 80%;
+    background: var(--cor-icon); /* Ou a cor que você preferir */
+    transition: all 0.3s ease;
+}
+
+.hamburger span:nth-child(1) {
+    top: 0;
+}
+
+.hamburger span:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.hamburger span:nth-child(3) {
+    bottom: 0;
+}
+
+
+/* Transformação para o X */
+.hamburger.active span:nth-child(1) {
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    bottom: 50%;
+    transform: translateY(50%) rotate(-45deg);
+}
+
+
+
+.hero {
+    
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+
+
+.hero img {
+    width: 100%;
+    height: 100vh;
+}
+
+.hero-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 30rem;
+    width: 80%;
+    padding: 20px;
+}
+.tituolo__principal {
+    display: flex;
+    justify-content: center; /* Alinha horizontalmente */
+    align-items: center; /* Alinha verticalmente */
+    font-size: 3rem;
+}
+
+.hero-text-principal p {
+   margin: auto; /* Centraliza o parágrafo dentro do flex container */
+    width: 90%; /* Largura do parágrafo */
+    /* Adicione mais estilos conforme necessário */
+}
+
+.hero-text-principal h1 {
+    font-weight: 700;
+    margin: auto; /* Centraliza o parágrafo dentro do flex container */
+     width: 90%; /* Largura do parágrafo */
+     /* Adicione mais estilos conforme necessário */
+ }
+
+
+#bottone1 {
+    padding-left: 33px;
+    padding-right: 33px;
+    padding-bottom: 16px;
+    padding-top: 16px;
+    border-radius: 9px;
+    background: var(--cor-primary);
+    color: white;
+    border: none;
+    font-size: 1rem;
+    font-family: inherit;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.4s;
+   }
+   
+   #bottone1:hover {
+    box-shadow: 7px 5px 56px -14px var(--cor-primary);
+   }
+   
+   #bottone1:active {
+    transform: scale(0.97);
+    box-shadow: 7px 5px 56px -10px var(--cor-primary);
+   }
+
+   @keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 var(--cor-primary);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 10px 0 var(--cor-primary);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 var(--cor-primary);
+    }
+}
+
+#bottone1 {
+    /* Seus estilos existentes */
+    animation: pulse 2s infinite;
+}
+
